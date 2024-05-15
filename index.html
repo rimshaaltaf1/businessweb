@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header{
+            display: flex;
+            /* border: 1px solid red; */
+            justify-content: space-evenly;
+        }
+        #logo{
+            width: 35px;
+            height: 35px;
+            margin-top: 15px;
+            /* margin-left: 10%; */
+            border-radius: 5px;
+            background-color: rgb(40, 211, 40);
+            box-shadow: 3px 3px 1px rgb(55, 245, 55);
+            cursor: pointer;
+        }
+        nav> ul{
+            display: flex;
+        }
+        nav> ul> li{
+            list-style-type: none;
+            padding: 10px;
+            margin: 0px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        nav> ul> li:hover{
+            color: rgb(55, 245, 55);
+        }
+        #slider> img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        #slider> #box{
+            width: 98.7%;
+            height: 400px;
+            background-color: rgba(73, 199, 73, 0.386);
+            position: absolute;
+            top: 9.9%;
+        }
+        #text{
+            position: absolute;
+            top: 15%;
+            text-align: center;
+            margin-left: 19%;
+            margin-top: 90px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #text> p{
+            font-weight: 100;
+        }
+        #slider-button{
+            background-color: #fff;   
+            border: 0px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #slider-button:hover{
+            color: rgb(55, 245, 55);
+        }
+        .products> h2{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .logo2{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(66, 211, 66);
+            border-radius: 50%;
+            position: absolute;
+            left: 280px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        .products> .logo2> img{
+            width: 60px;
+            height: 60px;
+            /* background-color: aqua; */
+            padding-left: 9px;
+            padding-top: 7px;
+            /* border: 1px solid red; */
+        }
+        .products> .p1{
+            /* border: 1px solid red; */
+            display: inline-block;
+            margin-top: 110px;
+            margin-left: 175px;
+            text-align: center;
+            /* border: 1px solid red; */
+        }
+        .products> .p1> span{
+            font-weight: bold;
+        }
+        .logo3{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(66, 211, 66);
+            border-radius: 50%;
+            position: absolute;
+            left: 600px;
+            top: 550px;
+            /* border: 1px solid red; */
+            /* display: flex; */
+        }
+        .products> .logo3> img{
+            width: 60px;
+            height: 60px;
+            /* background-color: aqua; */
+            padding-left: 9px;
+            padding-top: 7px;
+            /* border: 1px solid red; */
+        }
+        .products> .p2{
+            /* border: 1px solid red; */
+            display: inline-block;
+            margin-top: 110px;
+            margin-left: 175px;
+            text-align: center;
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 330px;
+        }
+        .products> .p2> span{
+            font-weight: bold;
+        }
+        .logo4{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(66, 211, 66);
+            border-radius: 50%;
+            position: absolute;
+            top: 550px;
+            left: 930px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        .products> .logo4> img{
+            width: 60px;
+            height: 60px;
+            /* background-color: aqua; */
+            padding-left: 9px;
+            padding-top: 7px;
+            /* border: 1px solid red; */
+        }
+        .products> .p3{
+            /* border: 1px solid red; */
+            display: inline-block;
+            margin-top: 110px;
+            margin-left: 175px;
+            text-align: center;
+            position: absolute;
+            right: 160px;
+        }
+        .products> .p3> span{
+            font-weight: bold;
+        }
+        .about{
+            width: 100%;
+            height: 400px;
+            background-color: rgb(231, 231, 231);
+            display: flex;
+        }
+        .about> .left{
+            /* border: 1px solid red; */
+            width: 50%;
+            height: 400px;
+            padding-top: 120px;
+            box-sizing: border-box;
+            padding-left: 85px;
+            padding-right: 50px;
+        }   
+        .about> .right{
+            /* border: 1px solid red; */
+            width: 50%;
+            height: 400px;
+        }
+        .about> .right> img{
+            width: 73%;
+            height: 70%;
+            justify-content: center;
+            padding-left: 85px;
+            padding-top: 70px;
+        }
+        .jane{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        .jane>.jane1{
+            font-size: 100px;
+            font-weight: 500;
+            margin-left: 90px;
+            margin-top: 50px;
+        }
+        .jane> .jane2{
+            font-size: 100px;
+            font-weight: 500;
+            margin-right: 90px;
+            margin-top: 50px;
+        }
+        .jane> img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        .jane> p{
+            /* border: 1px solid red; */
+            height: 40px;
+            margin-top: 60px;
+            margin-left: 40px;
+            margin-right: 80px;
+            /* padding-right: 50px; */
+        }
+        .jane> p> span{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .form{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 80px;
+            background-color: rgb(57, 218, 162);
+        }
+        .form> input{
+            background-color: rgb(57, 218, 162);
+            border: 1.5px solid #fff;
+            border-radius: 5px;
+            height: 35px;
+            width: 330px;
+            margin-left: 350px;
+            margin-top: 22px;
+            cursor: pointer;
+        }
+        .form> button{
+            background-color: #fff;   
+            border: 0px;
+            margin-left: 25px;
+            padding: 12px 32px;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+            color: rgb(57, 218, 162);
+        }
+        .footer{
+            width: 100%;
+            height: 200px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        .footer> .company{
+            /* border: 1px solid red; */
+            width: 47%;
+            height: 200px;
+            padding-left: 95px;
+            box-sizing: border-box;
+        }
+        .footer> .links{
+            /* border: 1px solid red; */
+            width: 30%;
+            height: 200px;
+            padding-left: 50px;
+            box-sizing: border-box;
+        }
+        .footer> .links> h1{
+            padding-left: 30px;
+        }
+        .footer> .links> ul> li{
+          list-style-type: none;
+        }
+        .footer> .contact{
+            /* border: 1px solid red; */
+            width: 45%;
+            height: 200px;
+            padding-left: 70px;
+        }
+        .contact> a{
+            text-decoration: none;
+            color: black;
+        }
+        .contact> a:hover{
+            color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="container">
+
+    <header>
+        <div id="logo"></div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>Pricing</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="slider">
+        <img src="img/slider.jpg" alt="">
+        <h1 id="box"></h1>
+        <div id="text">
+            <h1 id="h1">WE HELP YOUR BUSINESS</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid exercitationem, incidunt consectetur 
+            <br> vitae corrupti! rem voluptatum minima expedita facere et culpa animi, eveniet ratione inventore distinctio?</p>
+        
+            <button id="slider-button">LEARN MORE</button>
+        </div>
+    </div>
+    
+    <div class="products">
+        <h2>OUR PRODUCTS</h2>
+
+        <h1 class="logo2">
+            <img src="img/star-01.png" alt="">
+        </h1>
+
+        <p class="p1">
+            <span>SEO</span> <br>Lorem ipsum consectetur adipisicing Quis <br>
+            adipisci dignissimos. Minim uia officiis <br>
+            laboriosam asperiores consequuntur.
+        </p>
+
+        <h1 class="logo3">
+            <img src="img/star-01.png" alt="">
+        </h1>
+
+        <p class="p2">
+            <span>BRANDING</span> <br>Lorem ipsum consectetur adipisicing Quis <br>
+            adipisci dignissimos. Minim uia officiis <br>
+            laboriosam asperiores consequuntur.
+        </p>
+        
+        <h1 class="logo4">
+            <img src="img/star-01.png" alt="">
+        </h1>
+
+        <p class="p3">
+            <span>LOGO</span> <br>Lorem ipsum consectetur adipisicing Quis <br>
+            adipisci dignissimos. Minim uia officiis <br>
+            laboriosam asperiores consequuntur.
+        </p>
+    </div>
+
+    <div class="about">
+
+        <div class="left">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam assumenda enim, nobis consequatur dolores quae! Minus architecto sit.
+            Lorem ipsum dolor consectetur adipisicing elit. Debitis eum magni consequuntur ut, Odit itaque nesciunt repellendus.</p>
+        </div>
+        <div class="right">
+            <img src="img/chess.png" alt="">
+        </div>
+    </div>
+
+    <div class="jane">
+
+        <span class="jane1">&lt;</span>
+
+        <img src="img/kid.jpg" alt="">
+        <p><span>Jane Doe</span> <br>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, tempore! Illo, eveiet ex aliquam cmque inventore nihil quo quia iusto rerum fugit unde, natus cumque necessitatibus  Rem, tempore! Illo, eveniet experspiciatis.</p>
+
+        <span class="jane2">&gt;</span>
+    </div>
+
+    <div class="form">
+
+        <input type="email" name="" id="" placeholder="EMAIL ID">
+        <button>Subscribe</button>
+
+    </div>
+
+    <div class="footer">
+
+        <div class="company">
+            <h1>About Company</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adicing elit. Distinctio odit quae reiciis, sequi nesitatibus quia acusamus mollitia facilis incidunt quo nemo dignissimos optio harum asperiores quas ut nihil.</p>
+        </div>
+        <div class="links">
+        <h1>Quick Links</h1>
+            <ul>
+                <li>Home</li>
+                <li>Product</li>
+                <li>Pricing</li>
+                <li>Conatact</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contact Us</h1>
+
+            <a href="">info@gmail.com</a> <br>
+            <a href="">+92 3211234567</a>
+            <br><br>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a> 
+            <a href="https://google.co.uk/"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>    
+            </div>
+    </div>
+</div>
+
+
+</body>
+</html>
